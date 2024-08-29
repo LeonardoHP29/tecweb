@@ -11,9 +11,9 @@
         ?>
     </head>
     <body>
-    <script language="php"> 
-        echo "<h1> BUENO DIAS A TODOS </h1>";
-    </script>
+    <?php 
+    echo "<h1> BUENOS DIAS A TODOS </h1>";
+    ?>
     <?php
         echo "<h2> Titulo escrito por PHP </h2>";
         $variable2="MySQL";
