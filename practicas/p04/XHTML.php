@@ -28,7 +28,44 @@
         echo '<li>$_element1 es válida porque inicia con guión bajo.</li>';
         echo '<li>$house*5 es inválida porque el símbolo * no está permitido.</li>';
         echo '</ul>';
+        unset($_myvar,$_7var,$myvar,$var7,$_element1);
     ?>
-
+    <!--Ejercicio 2 -->
+    <h2>2. Proporcionar los valores de $a, $b, $c como sigue</h2>
+    <p>$a = "ManejadorSQL"<br>$b = 'MySQl'<br>$c = &$a</p>
+    <?php
+    //codigo de variables
+    $a = "ManejadorSQL";
+    $b = 'MySQL';
+    $c = &$a;
+    echo '<p>';
+    echo "a. Ahora muestra el contenido de cada variable";
+    echo '</p>';
+    echo 'La variable $a muestra '.$a.'<br>';
+    echo 'La variable $b muestra '.$b.'<br>';
+    echo 'La variable $c muestra '.$c.'<br>';
+    echo '<p>';
+    echo "b. Agrega al código actual las siguientes asignaciones:";
+    echo '</p>';
+    echo '<p>';
+    echo '$a = "PHP server"<br>$b = &$a';
+    echo '</p>';
+    //Codigo de variables
+    $a = "PHP server";
+    $b = &$a;
+    echo '<p>';
+    echo "c. Vuelve a mostrar el contenido de cada uno";
+    echo '</p>';
+    echo 'La variable $a muestra '.$a.'<br>';
+    echo 'La variable $b muestra '.$b.'<br>';
+    echo 'La variable $c muestra '.$c.'<br>';
+    echo '<p>';
+    echo "d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de asignaciones";
+    echo '</p>';
+    echo '<h4>Respuesta:</h4>';
+    echo 'Al momento de dar el segundo bloque de asignaciones se declaro que en la variable $a tuviera la cadena "PHP server",
+     donde despues al declara la variable $b se dice que sera igual a lo que contenga en la variable $a,por ultimo al momento 
+     de mostrar las variables $a,$b,$c muestran la cadena PHP server';
+    ?>
 </body>
 </html>
