@@ -38,30 +38,30 @@
     $a = "ManejadorSQL";
     $b = 'MySQL';
     $c = &$a;
-    echo '<p>';
+    echo '<h3>';
     echo "a. Ahora muestra el contenido de cada variable";
-    echo '</p>';
+    echo '</h3>';
     echo 'La variable $a muestra '.$a.'<br>';
     echo 'La variable $b muestra '.$b.'<br>';
     echo 'La variable $c muestra '.$c.'<br>';
-    echo '<p>';
+    echo '<h3>';
     echo "b. Agrega al código actual las siguientes asignaciones:";
-    echo '</p>';
+    echo '</h3>';
     echo '<p>';
     echo '$a = "PHP server"<br>$b = &$a';
     echo '</p>';
     //Codigo de variables
     $a = "PHP server";
     $b = &$a;
-    echo '<p>';
+    echo '<h3>';
     echo "c. Vuelve a mostrar el contenido de cada uno";
-    echo '</p>';
+    echo '</h3>';
     echo 'La variable $a muestra '.$a.'<br>';
     echo 'La variable $b muestra '.$b.'<br>';
     echo 'La variable $c muestra '.$c.'<br>';
-    echo '<p>';
+    echo '<h3>';
     echo "d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de asignaciones";
-    echo '</p>';
+    echo '</h3>';
     echo '<h4>Respuesta:</h4>';
     echo 'Al momento de dar el segundo bloque de asignaciones se declaro que en la variable $a tuviera la cadena "PHP server",
      donde despues al declara la variable $b se dice que sera igual a lo que contenga en la variable $a,por ultimo al momento 
