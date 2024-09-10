@@ -146,6 +146,48 @@
         echo 'El valor final de $a es '.$a.'<br>';
         echo 'El valor final de $b es '.$b.'<br>';
         echo 'El valor final de $c es '.$c.'<br>';
+        unset($a,$b,$c);
+    ?>
+    <!--Ejercicio 6 -->
+    <h2>6. Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas
+    usando la función var_dump(<datos>).</h2>
+    <p>$a = "0"<br>$b = "TRUE"<br>$c = FALSE<br>$d = ($a OR $b)<br>$e = ($a AND $c)<br>$f = ($a XOR $b)</p>
+    <?php
+        $a = "0";
+        $b = "TRUE";
+        $c = FALSE;
+        $d = ($a OR $b);
+        $e = ($a AND $c);
+        $f = ($a XOR $b);
+
+        echo 'El valor de $a es ';
+        var_dump($a);
+        echo '<br>';
+        echo 'El valor de $b es ';
+        var_dump($b);
+        echo '<br>';
+        echo 'El valor de $c es ';
+        var_dump($c);
+        echo '<br>';
+        echo 'El valor de $d es ';
+        var_dump($d);
+        echo '<br>';
+        echo 'El valor de $e es ';
+        var_dump($e);
+        echo '<br>';
+        echo 'El valor de $f es ';
+        var_dump($f);
+        echo '<br>';
+        //transformaciom
+        echo '<p>Después investiga una función de PHP que permita transformar el valor booleano de $c y $e
+        en uno que se pueda mostrar con un echo:</p>';
+        echo '<h4>Respuesta:</h4>';
+        echo "La función que nos permitirá transformar el valor booleano de \$c y \$e es la siguiente:<br>
+        \$c_t = (!\$c) ? 'TRUE' : 'FALSE';<br>\$e_t = (!\$e) ? 'TRUE' : 'FALSE';<br>";
+        $c_t = (!$c) ? 'TRUE' : 'FALSE';
+        $e_t = (!$e) ? 'TRUE' : 'FALSE';
+        echo 'El valor de $c es '.$c_t.'<br>';
+        echo 'El valor de $e es '.$e_t.'<br>';
     ?>
 </body>
 </html>
