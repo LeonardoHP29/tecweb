@@ -35,101 +35,117 @@
     <h2>2. Proporcionar los valores de $a, $b, $c como sigue</h2>
     <p>$a = "ManejadorSQL"<br>$b = 'MySQl'<br>$c = &$a</p>
     <?php
-    //codigo de variables
-    $a = "ManejadorSQL";
-    $b = 'MySQL';
-    $c = &$a;
-    echo '<h3>';
-    echo "a. Ahora muestra el contenido de cada variable";
-    echo '</h3>';
-    echo 'La variable $a muestra '.$a.'<br>';
-    echo 'La variable $b muestra '.$b.'<br>';
-    echo 'La variable $c muestra '.$c.'<br>';
-    echo '<h3>';
-    echo "b. Agrega al código actual las siguientes asignaciones:";
-    echo '</h3>';
-    echo '<p>';
-    echo '$a = "PHP server"<br>$b = &$a';
-    echo '</p>';
-    //Codigo de variables
-    $a = "PHP server";
-    $b = &$a;
-    echo '<h3>';
-    echo "c. Vuelve a mostrar el contenido de cada uno";
-    echo '</h3>';
-    echo 'La variable $a muestra '.$a.'<br>';
-    echo 'La variable $b muestra '.$b.'<br>';
-    echo 'La variable $c muestra '.$c.'<br>';
-    echo '<h3>';
-    echo "d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de asignaciones";
-    echo '</h3>';
-    echo '<h4>Respuesta:</h4>';
-    echo 'Al momento de dar el segundo bloque de asignaciones se declaro que en la variable $a tuviera la cadena "PHP server",
-     donde despues al declara la variable $b se dice que sera igual a lo que contenga en la variable $a,por ultimo al momento 
-     de mostrar las variables $a,$b,$c muestran la cadena PHP server';
-     //Eliminar variables
-     unset($a,$b,$c);
+        //codigo de variables
+        $a = "ManejadorSQL";
+        $b = 'MySQL';
+        $c = &$a;
+        echo '<h3>';
+        echo "a. Ahora muestra el contenido de cada variable";
+        echo '</h3>';
+        echo 'La variable $a muestra '.$a.'<br>';
+        echo 'La variable $b muestra '.$b.'<br>';
+        echo 'La variable $c muestra '.$c.'<br>';
+        echo '<h3>';
+        echo "b. Agrega al código actual las siguientes asignaciones:";
+        echo '</h3>';
+        echo '<p>';
+        echo '$a = "PHP server"<br>$b = &$a';
+        echo '</p>';
+        //Codigo de variables
+        $a = "PHP server";
+        $b = &$a;
+        echo '<h3>';
+        echo "c. Vuelve a mostrar el contenido de cada uno";
+        echo '</h3>';
+        echo 'La variable $a muestra '.$a.'<br>';
+        echo 'La variable $b muestra '.$b.'<br>';
+        echo 'La variable $c muestra '.$c.'<br>';
+        echo '<h3>';
+        echo "d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de asignaciones";
+        echo '</h3>';
+        echo '<h4>Respuesta:</h4>';
+        echo 'Al momento de dar el segundo bloque de asignaciones se declaro que en la variable $a tuviera la cadena "PHP server",
+        donde despues al declara la variable $b se dice que sera igual a lo que contenga en la variable $a,por ultimo al momento 
+        de mostrar las variables $a,$b,$c muestran la cadena PHP server';
+        //Eliminar variables
+        unset($a,$b,$c);
     ?>
     <!--Ejercicio 3 -->
     <h2>3. Muestra el contenido de cada variable inmediatamente después de cada asignación,
     verificar la evolución del tipo de estas variables (imprime todos los componentes de los
     arreglo):</h2>
     <?php
-    //1
-    echo '<p>$a = "PHP%"</p>';
-    $a="PHP5";
-    echo 'El contenido de la variable $a es ';
-	print_r($a);
-    //2
-    echo '<p>$z [] = &$a</p>';
-    $z[] = &$a;
-    echo 'El contenido de la variable $z es un ';
-	print_r($z);
-    //3
-    echo '<p>$b = "5a version de PHP"</p>';
-    $b = "5a version de PHP";
-    echo 'El contenido de la variable $b es ';
-	print_r($b);
-    /*
-    Preguntar
-    //4
-    echo '<p>$c = $b*10</p>';
-    $c = $b*10;
-    echo 'El contenido de la variable $c es ';
-	print_r($c);
-    */
-    //5
-    echo '<p>$a .= $b;</p>';
-    $a .= $b; 
-    echo 'El contenido de la variable $a es ';
-    print_r($a);
-    /*
-    Preguntar
-    //6
-    echo '<p>$b *= $c</p>';
-    $b *= $c
-    echo 'El contenido de la variable $b es ';
-	print_r($b);
-    */
-    //7
-    echo '<p>$z[0] = "MySQL"</p>';
-    $z[0] = "MySQL";
-    echo 'El contenido de la variable $z es ';
-    print_r($z);
+        //1
+        echo '<p>$a = "PHP%"</p>';
+        $a="PHP5";
+        echo 'El contenido de la variable $a es ';
+        print_r($a);
+        //2
+        echo '<p>$z [] = &$a</p>';
+        $z[] = &$a;
+        echo 'El contenido de la variable $z es un ';
+        print_r($z);
+        //3
+        echo '<p>$b = "5a version de PHP"</p>';
+        $b = "5a version de PHP";
+        echo 'El contenido de la variable $b es ';
+        print_r($b);
+        /*
+        Preguntar
+        //4
+        echo '<p>$c = $b*10</p>';
+        $c = $b*10;
+        echo 'El contenido de la variable $c es ';
+        print_r($c);
+        */
+        //5
+        echo '<p>$a .= $b;</p>';
+        $a .= $b; 
+        echo 'El contenido de la variable $a es ';
+        print_r($a);
+        /*
+        Preguntar
+        //6
+        echo '<p>$b *= $c</p>';
+        $b *= $c
+        echo 'El contenido de la variable $b es ';
+        print_r($b);
+        */
+        //7
+        echo '<p>$z[0] = "MySQL"</p>';
+        $z[0] = "MySQL";
+        echo 'El contenido de la variable $z es ';
+        print_r($z);
     ?>
     <!--Ejercicio 4 -->
     <h2>4. Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
     la matriz $GLOBALS o del modificador global de PHP.</h2>
     <?php
-    // Función para mostrar las variables usando 'global'
-    function mostrarVariables() {
-        global $a, $z, $b;
-        echo 'Valor de $a: '.$a.'<br>';
-        echo 'Valor de $b: '.$b.'<br>';
-        //echo 'Valor de \$c: '.$c.'<br>';
-        echo 'Valor de $z: '.print_r($z).'<br>';
-    }
-    mostrarVariables();
+        // Función para mostrar las variables usando 'global'
+        function mostrarVariables() {
+            global $a, $z, $b;
+            echo 'Valor de $a: '.$a.'<br>';
+            echo 'Valor de $b: '.$b.'<br>';
+            //echo 'Valor de \$c: '.$c.'<br>';
+            echo 'Valor de $z: ';
+            print_r($z);
+        }
+        mostrarVariables();
+        //Eliminar Variables
+        unset($a,$b,$z);
+    ?>
+    <!--Ejercicio 5 -->
+    <h2>5. Dar el valor de las variables $a, $b, $c al final del siguiente script:</h2>
+    <p>$a = "7 personas"<br>$b = (integer) $a<br>$a="9E3"<br>$c=(double) $a</p>
+    <?php
+        $a = "7 personas";
+        $b= (integer) $a;
+        $a = "9E3";
+        $c =(double) $a;
+        echo '<h4>Respuesta:</h4>';
+        echo 'El valor final de $a es '.$a.'<br>';
+        echo 'El valor final de $b es '.$b.'<br>';
+        echo 'El valor final de $c es '.$c.'<br>';
     ?>
 </body>
 </html>
