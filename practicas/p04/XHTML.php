@@ -66,6 +66,54 @@
     echo 'Al momento de dar el segundo bloque de asignaciones se declaro que en la variable $a tuviera la cadena "PHP server",
      donde despues al declara la variable $b se dice que sera igual a lo que contenga en la variable $a,por ultimo al momento 
      de mostrar las variables $a,$b,$c muestran la cadena PHP server';
+     unset($a,$b,$c);
+    ?>
+    <!--Ejercicio 3 -->
+    <h2>3. Muestra el contenido de cada variable inmediatamente después de cada asignación,
+    verificar la evolución del tipo de estas variables (imprime todos los componentes de los
+    arreglo):</h2>
+    <?php
+    //1
+    echo '<p>$a = "PHP%"</p>';
+    $a="PHP5";
+    echo 'El contenido de la variable $a es ';
+	print_r($a);
+    //2
+    echo '<p>$z [] = &$a</p>';
+    $z[] = &$a;
+    echo 'El contenido de la variable $z es un ';
+	print_r($z);
+    //3
+    echo '<p>$b = "5a version de PHP"</p>';
+    $b = "5a version de PHP";
+    echo 'El contenido de la variable $b es ';
+	print_r($b);
+    /*
+    Preguntar
+    //4
+    echo '<p>$c = $b*10</p>';
+    $c = $b*10;
+    echo 'El contenido de la variable $c es ';
+	print_r($c);
+    */
+    //5
+    echo '<p>$a .= $b;</p>';
+    $a .= $b; 
+    echo 'El contenido de la variable $a es ';
+    print_r($a);
+    /*
+    Preguntar
+    //6
+    echo '<p>$b *= $c</p>';
+    $b *= $c
+    echo 'El contenido de la variable $b es ';
+	print_r($b);
+    */
+    //7
+    echo '<p>$z[0] = "MySQL"</p>';
+    $z[0] = "MySQL";
+    echo 'El contenido de la variable $z es ';
+    print_r($z);
     ?>
 </body>
 </html>
