@@ -124,10 +124,10 @@
     // Función para mostrar las variables usando 'global'
     function mostrarVariables() {
         global $a, $z, $b;
-        echo 'Valor de \$a: '.$a.'<br>';
-        echo 'Valor de \$b: '.$b.'<br>';
+        echo 'Valor de $a: '.$a.'<br>';
+        echo 'Valor de $b: '.$b.'<br>';
         //echo 'Valor de \$c: '.$c.'<br>';
-        echo 'Valor de \$z: '.print_r($z).'<br>';
+        echo 'Valor de $z: '.print_r($z).'<br>';
     }
     mostrarVariables();
     ?>
