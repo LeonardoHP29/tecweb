@@ -28,6 +28,7 @@
         echo '<li>$_element1 es válida porque inicia con guión bajo.</li>';
         echo '<li>$house*5 es inválida porque el símbolo * no está permitido.</li>';
         echo '</ul>';
+        //Eliminar variables
         unset($_myvar,$_7var,$myvar,$var7,$_element1);
     ?>
     <!--Ejercicio 2 -->
@@ -66,6 +67,7 @@
     echo 'Al momento de dar el segundo bloque de asignaciones se declaro que en la variable $a tuviera la cadena "PHP server",
      donde despues al declara la variable $b se dice que sera igual a lo que contenga en la variable $a,por ultimo al momento 
      de mostrar las variables $a,$b,$c muestran la cadena PHP server';
+     //Eliminar variables
      unset($a,$b,$c);
     ?>
     <!--Ejercicio 3 -->
@@ -114,6 +116,20 @@
     $z[0] = "MySQL";
     echo 'El contenido de la variable $z es ';
     print_r($z);
+    ?>
+    <!--Ejercicio 4 -->
+    <h2>4. Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
+    la matriz $GLOBALS o del modificador global de PHP.</h2>
+    <?php
+    // Función para mostrar las variables usando 'global'
+    function mostrarVariables() {
+        global $a, $z, $b;
+        echo 'Valor de \$a: '.$a.'<br>';
+        echo 'Valor de \$b: '.$b.'<br>';
+        //echo 'Valor de \$c: '.$c.'<br>';
+        echo 'Valor de \$z: '.print_r($z).'<br>';
+    }
+    mostrarVariables();
     ?>
 </body>
 </html>
