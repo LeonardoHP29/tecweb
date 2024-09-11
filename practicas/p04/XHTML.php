@@ -77,39 +77,37 @@
         echo '<p>$b *= $c</p>';
         echo '<p>$z[0] = "MySQL"</p>';
 
-        // Variables
-        $a = "PHP5";
-        $a2=$a;
-        $z[] = &$a;
-        $z2 []=&$a;
-        $b = "5a version de PHP";
-        $b2=$b;
-        // $c = $b * 10; // Comentado para preguntar
-        $a .= $b; 
-        // $b *= $c; // Comentado para preguntar
-        $z[0] = "MySQL";
+        $b *= $c; // Comentado para preguntar
 
         // Impresión
         echo '<p>Resultados por orden de Asignacion:</p>';
         echo '<ul>';
-        echo '<li>El contenido de la variable $a es ';
-        print_r($a2);
-        echo '</li>';
-        echo '<li>El contenido de la variable $z es ';
-        print_r($z2); //checar esto
-        echo '</li>';
-        echo '<li>El contenido de la variable $b es ';
-        print_r($b2);
-        echo '</li>';
-        // echo '<li>El contenido de la variable $c es ';
-        // print_r($c);
-        // echo '</li>';
+        $a = "PHP5";
         echo '<li>El contenido de la variable $a es ';
         print_r($a);
         echo '</li>';
-        // echo '<li>El contenido de la variable $b es ';
-        // print_r($b);
-        // echo '</li>';
+        $z[] = &$a;
+        echo '<li>El contenido de la variable $z es ';
+        print_r($z); //checar esto
+        echo '</li>';
+        $b = "5a version de PHP";
+        echo '<li>El contenido de la variable $b es ';
+        print_r($b);
+        echo '</li>';
+        $c = (int)$b * 10;
+        echo '<li>El contenido de la variable $c es ';
+        print_r($c);
+        echo '</li>';
+        $a .= $b; 
+        echo '<li>El contenido de la variable $a es ';
+        print_r($a);
+        echo '</li>';
+        $b=(int)$b;
+        $b *= $c;
+        echo '<li>El contenido de la variable $b es ';
+        print_r($b);
+        echo '</li>';
+        $z[0] = "MySQL";
         echo '<li>El contenido de la variable $z es ';
         print_r($z);
         echo '</li>';
@@ -122,11 +120,12 @@
     <?php
         // Función para mostrar las variables usando 'global'
         function mostrarVariables() {
-            global $a, $z, $b;
+            global $a, $z, $b, $c;
             echo '<p>El valor de las variables globales del ejercicio anterior son las siguientes:</p>';
             echo '<ul>';
             echo '<li>Valor de $a: '.$a.'</li>';
             echo '<li>Valor de $b: '.$b.'</li>';
+            echo '<li>Valor de $c: '.$c.'</li>';
             // echo '<li>Valor de $c: '.$c.'</li>';
             echo '<li>Valor de $z: ';
             print_r($z);
@@ -135,7 +134,7 @@
         }
         mostrarVariables();
         // Eliminar variables
-        unset($a, $b, $z);
+        unset($a, $b, $z, $c);
     ?>
     
     <!-- Ejercicio 5 -->
