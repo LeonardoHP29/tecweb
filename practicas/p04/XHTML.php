@@ -214,17 +214,17 @@
         echo '<p>Resultados:</p>';
         echo '<ul>';
         echo '<li>La versión de Apache es: '.$_SERVER["SERVER_SOFTWARE"].'</li>';
-        echo '<li>La versión de PHP es: '.$_SERVER["PHP_VERSION"].'</li>';
+        echo '<li>La versión de PHP es: '.phpversion().'</li>';
         echo '</ul>';
 
         // 2
         echo '<h3>b. El nombre del sistema operativo (servidor):</h3>';
         echo '<h4>Respuesta: </h4>';
         echo '<p>Usando la variable $_SERVER se puede determinar el nombre del sistema operativo con la siguiente sintaxis:<br>';
-        echo '$_SERVER["SERVER_OS"]</p>';
+        echo 'php_uname("s")</p>';
         echo '<p>Resultados:</p>';
         echo '<ul>';
-        echo '<li>El nombre del sistema operativo es: '.$_SERVER["SERVER_OS"].'</li>';
+        echo '<li>El nombre del sistema operativo es: '.php_uname("s").'</li>';
         echo '</ul>';
 
         // 3
