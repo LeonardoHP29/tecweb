@@ -77,8 +77,6 @@
         echo '<p>$b *= $c</p>';
         echo '<p>$z[0] = "MySQL"</p>';
 
-        $b *= $c; // Comentado para preguntar
-
         // Impresión
         echo '<p>Resultados por orden de Asignacion:</p>';
         echo '<ul>';
