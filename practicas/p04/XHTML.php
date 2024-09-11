@@ -69,7 +69,7 @@
     <h2>3. Muestra el contenido de cada variable inmediatamente después de cada asignación, verifica la evolución del tipo de estas variables (imprime todos los componentes del arreglo):</h2>
     <?php
         // Descripción
-        echo '<p>$a = "PHP%"</p>';
+        echo '<p>$a = "PHP5"</p>';
         echo '<p>$z [] = &$a</p>';
         echo '<p>$b = "5a version de PHP"</p>';
         echo '<p>$c = $b*10</p>';
@@ -79,29 +79,42 @@
 
         // Variables
         $a = "PHP5";
+        $a2=$a;
         $z[] = &$a;
+        $z2=$z;
         $b = "5a version de PHP";
+        $b2=$b;
         // $c = $b * 10; // Comentado para preguntar
         $a .= $b; 
         // $b *= $c; // Comentado para preguntar
         $z[0] = "MySQL";
 
         // Impresión
-        echo '<p>Resultados:</p>';
+        echo '<p>Resultados por orden de Asignacion:</p>';
         echo '<ul>';
         echo '<li>El contenido de la variable $a es ';
-        print_r($a);
+        print_r($a2);
         echo '</li>';
         echo '<li>El contenido de la variable $z es ';
-        print_r($z);
+        print_r($z2);
         echo '</li>';
         echo '<li>El contenido de la variable $b es ';
-        print_r($b);
+        print_r($b2);
         echo '</li>';
         // echo '<li>El contenido de la variable $c es ';
         // print_r($c);
         // echo '</li>';
+        echo '<li>El contenido de la variable $a es ';
+        print_r($a);
+        echo '</li>';
+        // echo '<li>El contenido de la variable $b es ';
+        // print_r($b);
+        // echo '</li>';
+        echo '<li>El contenido de la variable $z es ';
+        print_r($z);
+        echo '</li>';
         echo '</ul>';
+        
     ?>
     
     <!-- Ejercicio 4 -->
