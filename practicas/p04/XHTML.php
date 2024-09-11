@@ -42,9 +42,11 @@
         echo '<h3>';
         echo "a. Ahora muestra el contenido de cada variable";
         echo '</h3>';
-        echo 'La variable $a muestra '.$a.'<br>';
-        echo 'La variable $b muestra '.$b.'<br>';
-        echo 'La variable $c muestra '.$c.'<br>';
+        echo '<ul>';
+        echo '<li>La variable $a muestra '.$a.'</li>';
+        echo '<li>La variable $b muestra '.$b.'</li>';
+        echo '<li>La variable $c muestra '.$c.'</li>';
+        echo '<ul>';
         echo '<h3>';
         echo "b. Agrega al código actual las siguientes asignaciones:";
         echo '</h3>';
@@ -57,16 +59,18 @@
         echo '<h3>';
         echo "c. Vuelve a mostrar el contenido de cada uno";
         echo '</h3>';
-        echo 'La variable $a muestra '.$a.'<br>';
-        echo 'La variable $b muestra '.$b.'<br>';
-        echo 'La variable $c muestra '.$c.'<br>';
+        echo '<ul>';
+        echo '<li>La variable $a muestra '.$a.'</li>';
+        echo '<li>La variable $b muestra '.$b.'</li>';
+        echo '<li>La variable $c muestra '.$c.'</li>';
+        echo '</ul>';
         echo '<h3>';
         echo "d. Describe en y muestra en la página obtenida qué ocurrió en el segundo bloque de asignaciones";
         echo '</h3>';
         echo '<h4>Respuesta:</h4>';
-        echo 'Al momento de dar el segundo bloque de asignaciones se declaro que en la variable $a tuviera la cadena "PHP server",
+        echo '<p>Al momento de dar el segundo bloque de asignaciones se declaro que en la variable $a tuviera la cadena "PHP server",
         donde despues al declara la variable $b se dice que sera igual a lo que contenga en la variable $a,por ultimo al momento 
-        de mostrar las variables $a,$b,$c muestran la cadena PHP server';
+        de mostrar las variables $a,$b,$c muestran la cadena PHP server</p>';
         //Eliminar variables
         unset($a,$b,$c);
     ?>
@@ -75,47 +79,54 @@
     verificar la evolución del tipo de estas variables (imprime todos los componentes de los
     arreglo):</h2>
     <?php
-        //1
+        //Descripcion
         echo '<p>$a = "PHP%"</p>';
-        $a="PHP5";
-        echo 'El contenido de la variable $a es ';
-        print_r($a);
-        //2
         echo '<p>$z [] = &$a</p>';
-        $z[] = &$a;
-        echo 'El contenido de la variable $z es un ';
-        print_r($z);
-        //3
         echo '<p>$b = "5a version de PHP"</p>';
-        $b = "5a version de PHP";
-        echo 'El contenido de la variable $b es ';
-        print_r($b);
-        /*
-        Preguntar
-        //4
         echo '<p>$c = $b*10</p>';
-        $c = $b*10;
-        echo 'El contenido de la variable $c es ';
-        print_r($c);
-        */
-        //5
         echo '<p>$a .= $b;</p>';
-        $a .= $b; 
-        echo 'El contenido de la variable $a es ';
-        print_r($a);
-        /*
-        Preguntar
-        //6
         echo '<p>$b *= $c</p>';
-        $b *= $c
-        echo 'El contenido de la variable $b es ';
+        echo '<p>$z[0] = "MySQL"</p>';
+
+        //Variables
+        $a="PHP5";
+        $z[] = &$a;
+        $b = "5a version de PHP";
+        // $c = $b*10; Preguntar
+        $a .= $b; 
+        //$b *= $c; Preguntar
+        $z[0] = "MySQL";
+
+        //Impresion
+        echo '<p>Resultados: </p>';
+        echo '<ul>';
+        echo '<li>El contenido de la variable $a es ';
+        print_r($a);
+        echo '</li>';
+        echo '<li>El contenido de la variable $z es un ';
+        print_r($z);
+        echo '</li>';
+        echo '<li>El contenido de la variable $b es ';
         print_r($b);
+        echo '</li>';
+        /*
+        echo '<li>El contenido de la variable $c es ';
+        print_r($c);
+        echo '</li>'
+        */
+        echo '<li>El contenido de la variable $a es ';
+        print_r($a);
+        echo '</li>';
+        /*
+        echo '<li>El contenido de la variable $b es ';
+        print_r($b);
+        echo '</li>';
         */
         //7
-        echo '<p>$z[0] = "MySQL"</p>';
-        $z[0] = "MySQL";
-        echo 'El contenido de la variable $z es ';
+        echo '<li>El contenido de la variable $z es ';
         print_r($z);
+        echo '</li>';
+        echo '</ul>';
     ?>
     <!--Ejercicio 4 -->
     <h2>4. Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de
@@ -124,11 +135,15 @@
         // Función para mostrar las variables usando 'global'
         function mostrarVariables() {
             global $a, $z, $b;
-            echo 'Valor de $a: '.$a.'<br>';
-            echo 'Valor de $b: '.$b.'<br>';
-            //echo 'Valor de \$c: '.$c.'<br>';
-            echo 'Valor de $z: ';
+            echo '<p>El valor de las variables globales del ejercicio anterior son las siguientes:</p>';
+            echo '<ul>';
+            echo '<li>Valor de $a: '.$a.'<</li>>';
+            echo '<li>Valor de $b: '.$b.'</li>';
+            //echo '<li>Valor de \$c: '.$c.'</li>';
+            echo '<li>Valor de $z: ';
             print_r($z);
+            echo '</li>';
+            echo '</ul>';
         }
         mostrarVariables();
         //Eliminar Variables
@@ -143,9 +158,12 @@
         $a = "9E3";
         $c =(double) $a;
         echo '<h4>Respuesta:</h4>';
-        echo 'El valor final de $a es '.$a.'<br>';
-        echo 'El valor final de $b es '.$b.'<br>';
-        echo 'El valor final de $c es '.$c.'<br>';
+        echo '<ul>';
+        echo '<li>El valor final de $a es '.$a.'</li>';
+        echo '<li>El valor final de $b es '.$b.'</li>';
+        echo '<li>El valor final de $c es '.$c.'</li>';
+        echo '</ul>';
+        //Eliminar Variables
         unset($a,$b,$c);
     ?>
     <!--Ejercicio 6 -->
@@ -160,34 +178,69 @@
         $e = ($a AND $c);
         $f = ($a XOR $b);
 
-        echo 'El valor de $a es ';
+        echo '<ul>';
+        echo '<li>El valor de $a es ';
         var_dump($a);
-        echo '<br>';
-        echo 'El valor de $b es ';
+        echo '</li>';
+        echo '<li>El valor de $b es ';
         var_dump($b);
-        echo '<br>';
-        echo 'El valor de $c es ';
+        echo '</li>';
+        echo '<li>El valor de $c es ';
         var_dump($c);
-        echo '<br>';
-        echo 'El valor de $d es ';
+        echo '</li>';
+        echo '<li>El valor de $d es ';
         var_dump($d);
-        echo '<br>';
-        echo 'El valor de $e es ';
+        echo '</li>';
+        echo '<li>El valor de $e es ';
         var_dump($e);
-        echo '<br>';
-        echo 'El valor de $f es ';
+        echo '</li>';
+        echo '<li>El valor de $f es ';
         var_dump($f);
-        echo '<br>';
+        echo '</li>';
+        echo '</ul>';
         //transformaciom
         echo '<p>Después investiga una función de PHP que permita transformar el valor booleano de $c y $e
         en uno que se pueda mostrar con un echo:</p>';
         echo '<h4>Respuesta:</h4>';
-        echo "La función que nos permitirá transformar el valor booleano de \$c y \$e es la siguiente:<br>
-        \$c_t = (!\$c) ? 'TRUE' : 'FALSE';<br>\$e_t = (!\$e) ? 'TRUE' : 'FALSE';<br>";
+        echo "<p>La función que nos permitirá transformar el valor booleano de \$c y \$e es la siguiente:<br>
+        \$c_t = (!\$c) ? 'TRUE' : 'FALSE';<br>\$e_t = (!\$e) ? 'TRUE' : 'FALSE';<br></p>";
         $c_t = (!$c) ? 'TRUE' : 'FALSE';
         $e_t = (!$e) ? 'TRUE' : 'FALSE';
-        echo 'El valor de $c es '.$c_t.'<br>';
-        echo 'El valor de $e es '.$e_t.'<br>';
+        echo '<p>Resultados:</p>';
+        echo '<ul>';
+        echo '<li>El valor de $c es '.$c_t.'</li>';
+        echo '<li>El valor de $e es '.$e_t.'</li>';
+        echo '</ul>';
+    ?>
+    <!--Ejercicio 7 -->
+    <h2>7. Usando la variable predefinida $_SERVER, determina lo siguiente:</h2>
+    <?php
+        //1 
+        echo '<p>a. La versión de Apache y PHP,</p><br>';
+        echo '<h4>Respuesta: </h4>';
+        echo '<p>Usando la variable $_SERVER se puede determinar la version de PHP y Apache con la siguiengte sintaxis: 
+        <br>$_SERVER["SERVER_SOFTWARE"]<br>phpversion()</p>';
+        echo '<p>Resultados:</p>';
+        echo '<ul>';
+        echo '<li>La version de Apache es :'.$_SERVER["SERVER_SOFTWARE"].'</li>';
+        echo '<li>La version de PHP es :'.phpversion().'</li>';
+        echo '/<ul>';
+        //2
+        echo '<p>b. El nombre del sistema operativo (servidor),</p><br>';
+        echo '<h4>Respuesta: </h4>';
+        echo '<p>Usando la variable $_SERVER se puede determinar el nombre del sistema operativo con la siguiengte sintaxis: 
+        <br>$_SERVER["SERVER_OS"]</p>';
+        echo '<ul>';
+        echo '<li>El nombre del sistema Operativo es :'.$_SERVER["SERVER_OS"].'</li>';
+        echo '/<ul>';
+        //3
+        echo '<p>c. El idioma del navegador (cliente).</p><br>';
+        echo '<h4>Respuesta: </h4>';
+        echo '<p>Usando la variable $_SERVER se puede determinar el idioma del navegador del cliente con la siguiengte sintaxis: 
+        <br>$_SERVER["HTTP_ACCEPT_LANGUAJE"]</p>';
+        echo '<ul>';
+        echo '<li>El idioma del navegador del cliente es :'.$_SERVER["HTTP_ACCEPT_LANGUAJE"].'</li>';
+        echo '/<ul>';
     ?>
 </body>
 </html>
