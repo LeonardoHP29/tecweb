@@ -81,7 +81,7 @@
         $a = "PHP5";
         $a2=$a;
         $z[] = &$a;
-        $z2=$z;
+        $z2 []=&$a;
         $b = "5a version de PHP";
         $b2=$b;
         // $c = $b * 10; // Comentado para preguntar
@@ -96,7 +96,7 @@
         print_r($a2);
         echo '</li>';
         echo '<li>El contenido de la variable $z es ';
-        print_r($z2);
+        print_r($z2); //checar esto
         echo '</li>';
         echo '<li>El contenido de la variable $b es ';
         print_r($b2);
@@ -214,27 +214,27 @@
         echo '<p>Resultados:</p>';
         echo '<ul>';
         echo '<li>La versión de Apache es: '.$_SERVER["SERVER_SOFTWARE"].'</li>';
-        echo '<li>La versión de PHP es: '.phpversion().'</li>';
+        echo '<li>La versión de PHP es: '.$_SERVER["PHP_VERSION"].'</li>';
         echo '</ul>';
 
         // 2
         echo '<h3>b. El nombre del sistema operativo (servidor):</h3>';
         echo '<h4>Respuesta: </h4>';
         echo '<p>Usando la variable $_SERVER se puede determinar el nombre del sistema operativo con la siguiente sintaxis:<br>';
-        echo '(isset($_SERVER["SERVER_OS"]) ? $_SERVER["SERVER_OS"] : "No disponible")</p>';
+        echo '$_SERVER["SERVER_OS"]</p>';
         echo '<p>Resultados:</p>';
         echo '<ul>';
-        echo '<li>El nombre del sistema operativo es: '.(isset($_SERVER["SERVER_OS"]) ? $_SERVER["SERVER_OS"] : 'No disponible').'</li>';
+        echo '<li>El nombre del sistema operativo es: '.$_SERVER["SERVER_OS"].'</li>';
         echo '</ul>';
 
         // 3
         echo '<h3>c. El idioma del navegador (cliente):</h3>';
         echo '<h4>Respuesta: </h4>';
         echo '<p>Usando la variable $_SERVER se puede determinar el idioma del navegador del cliente con la siguiente sintaxis:<br>';
-        echo '(isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $_SERVER["HTTP_ACCEPT_LANGUAGE"] : "No disponible")</p>';
+        echo '$_SERVER["HTTP_ACCEPT_LANGUAGE"]</p>';
         echo '<p>Resultados:</p>';
         echo '<ul>';
-        echo '<li>El idioma del navegador del cliente es: '.(isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $_SERVER["HTTP_ACCEPT_LANGUAGE"] : "No disponible").'</li>';
+        echo '<li>El idioma del navegador del cliente es: '.$_SERVER["HTTP_ACCEPT_LANGUAGE"].'</li>';
         echo '</ul>';
     ?>
 </body>
