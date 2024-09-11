@@ -86,13 +86,14 @@
         echo '</li>';
         $z[] = &$a;
         echo '<li>El contenido de la variable $z es ';
-        print_r($z); //checar esto
+        print_r($z); 
         echo '</li>';
         $b = "5a version de PHP";
         echo '<li>El contenido de la variable $b es ';
         print_r($b);
         echo '</li>';
-        $c = (int)$b * 10;
+        settype($b,"integer");
+        $c = $b * 10;
         echo '<li>El contenido de la variable $c es ';
         print_r($c);
         echo '</li>';
@@ -100,7 +101,7 @@
         echo '<li>El contenido de la variable $a es ';
         print_r($a);
         echo '</li>';
-        $b=(int)$b;
+        $b=$b;
         $b *= $c;
         echo '<li>El contenido de la variable $b es ';
         print_r($b);
@@ -187,14 +188,11 @@
         // Transformación
         echo '<p>Después investiga una función de PHP que permita transformar el valor booleano de $c y $e en uno que se pueda mostrar con un echo:</p>';
         echo '<h4>Respuesta:</h4>';
-        echo "<p>La función que nos permitirá transformar el valor booleano de \$c y \$e es la siguiente:<br>
-        \$c_t = (!\$c) ? 'TRUE' : 'FALSE';<br>\$e_t = (!\$e) ? 'TRUE' : 'FALSE';<br></p>";
-        $c_t = (!$c) ? 'TRUE' : 'FALSE';
-        $e_t = (!$e) ? 'TRUE' : 'FALSE';
+        echo "<p>La función que nos permitirá transformar el valor booleano de \$c y \$e es la siguiente:<br>print_r(\$c)<br>print_r(\$e)</p>";
         echo '<p>Resultados:</p>';
         echo '<ul>';
-        echo '<li>El valor de $c es '.$c_t.'</li>';
-        echo '<li>El valor de $e es '.$e_t.'</li>';
+        echo '<li>El valor de $c es '.print_r($c).'</li>';
+        echo '<li>El valor de $e es '.print_r($e).'</li>';
         echo '</ul>';
         unset($a,$b,$c,$d,$e,$f,$c_t,$e_t);
     ?>
