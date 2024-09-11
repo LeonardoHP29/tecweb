@@ -209,6 +209,7 @@
         echo '<h4>Respuesta: </h4>';
         echo '<p>Usando la variable $_SERVER se puede determinar el nombre del sistema operativo con la siguiente sintaxis:<br>';
         echo '(isset($_SERVER["SERVER_OS"]) ? $_SERVER["SERVER_OS"] : "No disponible")</p>';
+        echo '<p>Resultados:</p>';
         echo '<ul>';
         echo '<li>El nombre del sistema operativo es: '.(isset($_SERVER["SERVER_OS"]) ? $_SERVER["SERVER_OS"] : 'No disponible').'</li>';
         echo '</ul>';
@@ -218,6 +219,7 @@
         echo '<h4>Respuesta: </h4>';
         echo '<p>Usando la variable $_SERVER se puede determinar el idioma del navegador del cliente con la siguiente sintaxis:<br>';
         echo '(isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $_SERVER["HTTP_ACCEPT_LANGUAGE"] : "No disponible")</p>';
+        echo '<p>Resultados:</p>';
         echo '<ul>';
         echo '<li>El idioma del navegador del cliente es: '.(isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]) ? $_SERVER["HTTP_ACCEPT_LANGUAGE"] : "No disponible").'</li>';
         echo '</ul>';
