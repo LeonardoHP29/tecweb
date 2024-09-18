@@ -8,7 +8,7 @@
 <body>
     <h2>Ejercicio 1</h2>
     <p>Escribir programa para comprobar si un número es un múltiplo de 5 y 7</p>
-    <form action="http://localhost/tecweb/practicas/p06/src/funciones" method="get">
+    <form action="http://localhost/tecweb/practicas/p06/index.php" method="get">
         Ingresar un numero: <input type="number" name="numero"><br>
         <input type="submit">
     </form>
