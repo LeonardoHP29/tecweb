@@ -1,4 +1,4 @@
-/*Solucion del ejercicio 1 */
+//solucion del ejercicio 1
 <?php
     if(isset($_GET['numero']))
     {
