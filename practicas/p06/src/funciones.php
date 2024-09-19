@@ -77,3 +77,25 @@ function secuencia() {
         }
     }
 ?>
+<!--Solucion del Ejercicio 4-->
+<?php
+    function matriz(){
+        echo "<h4>Tabla de Abecedario de ASCII</h4>";
+        $matriz = array();
+
+        for($i=97;$i<=122;$i++){
+            $matriz[$i]=chr($i);
+        }
+
+        //Tabla
+        echo "<table border='1' cellpadding='5' cellspacing='0'>";
+        echo "<tr><th>Índice ASCII</th><th>Letra</th></tr>"; 
+        foreach($matriz as $num =>$letra){
+            echo "<tr>";
+            echo "<td>$num</td>";
+            echo "<td>$letra</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+    }
+?>
