@@ -43,3 +43,37 @@ function secuencia() {
     echo "<h3>$numeros_generados números obtenidos en $iter iteraciones.</h3>";
     }
 ?>
+<!--Solucion del Ejercicio 3-->
+<?php
+    function ciclo_while(){
+        echo "<h4>1. Este es el resultado utilizando el ciclo while:</h4>";
+        if (isset($_GET['n'])) {
+            $n = (int)$_GET['n'];
+
+            function multiplo($n) {
+                $numero_aleatorio = rand(1, 100); 
+                while ($numero_aleatorio % $n != 0) { 
+                    $numero_aleatorio = rand(1, 100); 
+                }
+                return $numero_aleatorio;
+            }
+            echo '<p>Primer múltiplo de '.$n.' encontrado: '.multiplo($n).'</p>';
+        }
+    }
+
+    function ciclo_dowhile(){
+        echo "<h4>2. Este es el resultado utilizando el ciclo do while:</h4>";
+        if (isset($_GET['n'])) {
+            $n = (int)$_GET['n'];
+
+            function multiplo2($n) {
+                do {
+                    $numero_aleatorio2 = rand(1, 100);
+                } while ($numero_aleatorio2 % $n != 0);
+        
+                return $numero_aleatorio2;
+            }
+            echo '<p>Primer múltiplo de '.$n.' encontrado: '.multiplo2($n).'</p>';
+        }
+    }
+?>
