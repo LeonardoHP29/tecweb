@@ -85,10 +85,14 @@
 				echo '<h2 style="color:#000">No se pudo regristar el producto ya que se encuentra en la base de datos</h2>';
 			} else {
 				// Insertar el producto si no existe
+				/*
 				$sql = "INSERT INTO productos VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}')";
 				$stmt = $link->prepare($sql);
-				$stmt->bind_param('sssdssi', $nombre, $marca, $modelo, $precio, $detalles, $unidades, $imagen);
-				
+				*/
+				$sql = "INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen) 
+				VALUES ('$nombre', '$marca', '$modelo', $precio, '$detalles', $unidades, '$imagen')";
+				$stmt = $link->prepare($sql);
+
 				if ($stmt->execute()) {
 					echo '<h1>Registro Completado</h1>';
 					echo '<h2>Información del Producto:</h2>';
