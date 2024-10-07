@@ -18,5 +18,13 @@ function ejercicio2(){
     var altura=1.92;
     var casado=true;
     var div4 = document.getElementById('Ejemplo2');
-    div4.innerHTML=nombre+'<br>'+edad+'<br>'+altura+'<br>'+casado+'<br>';
+    div4.innerHTML='<p>'+nombre+'<br>'+edad+'<br>'+altura+'<br>'+casado+'<br>'+'</p>';
+}
+function ejercicio3(){
+    var nombre;
+    var edad;
+    nombre=prompt('Ingresa tu nombre: ','');
+    edad=prompt('Ingresa tu edad: ',0);
+    var div5 = document.getElementById('Ejemplo3');
+    div5.innerHTML='<p>Hola '+nombre+' asi que tienes '+edad+' años</p>'
 }
