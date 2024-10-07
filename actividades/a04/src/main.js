@@ -28,3 +28,23 @@ function ejercicio3(){
     var div5 = document.getElementById('Ejemplo3');
     div5.innerHTML='<p>Hola '+nombre+' asi que tienes '+edad+' años</p>'
 }
+function ejercicio4(){
+    var valor1;
+    var valor2;
+    valor1=prompt('Introducir el primer numero: ','');
+    valor2=prompt('Introducir el segundo numero: ','');
+    var suma=parseInt(valor1)+parseInt(valor2);
+    var producto=parseInt(valor1)*parseInt(valor2);
+    var div6 = document.getElementById('Ejemplo4');
+    div6.innerHTML='<p>La suma es '+suma+'<br>El producto es '+producto+' </p>'
+}
+function ejercicio5(){
+    var nombre;
+    var nota;
+    nombre=prompt('Ingresa tu nombre: ','');
+    nota=prompt('Ingresa tu nota: ', '');
+    if(nota>=4){
+        var div7 = document.getElementById('Ejemplo5');
+        div7.innerHTML='<p>'+nombre+' esta aprobado con un '+nota+'</p>'
+    }
+}
