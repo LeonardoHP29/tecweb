@@ -184,3 +184,42 @@ function ejercicio15(){
     mostrarMensaje();
     mostrarMensaje();
 }
+function ejercicio16(){
+    var div18 =document.getElementById('Ejemplo16');
+    var resultado='';
+    function mostrarRango(x1,x2){
+        var inicio;
+        for(inicio=x1;inicio<=x2;inicio++){
+            resultado+=inicio+' ';
+        }
+    }
+    var valor1,valor2;
+    valor1=prompt('Ingresar el valor inferior: ','');
+    valor1=parseInt(valor1);
+    valor2=prompt('Ingresar el valor superior: ','');
+    valor2=parseInt(valor2);
+    mostrarRango(valor1,valor2);
+    div18.innerHTML='<p>'+resultado+'</p>';
+}
+function ejercicio17(){
+    function convertirCastellano(x){
+        if(x==1){
+            return "uno";
+        }else if(x==2){
+            return "dos";
+        }else if(x==3){
+            return "tres";
+        }else if(x==4){
+            return "cuatro";
+        }else if(x==5){
+            return "cinco";
+        }else{
+            return "valor incorrecto";
+        }
+    }
+    var valor;
+    valor=prompt('Ingresa un valor entre 1 y 5','');
+    var r=convertirCastellano(valor);
+    var div19=document.getElementById('Ejemplo17');
+    div19.innerHTML='<p>'+r+'</p>';
+}
