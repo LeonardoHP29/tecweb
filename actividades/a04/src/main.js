@@ -140,3 +140,32 @@ function ejercicio11(){
     var div13 = document.getElementById('Ejemplo11');
     div13.innerHTML='<p>La suma de los valores es '+suma+'<br></p>'
 }
+function ejercicio12() {
+    var valor;
+    var div14 = document.getElementById('Ejemplo12'); 
+    var resultado = ''; 
+    do {
+        valor = prompt('Ingresa un valor entre 0 y 999:', '');
+        valor = parseInt(valor);
+        resultado += '<p>El valor ' + valor + ' tiene ';
+        if (valor < 10) {
+            resultado += " 1 dígito";
+        } else if (valor < 100) {
+            resultado += " 2 dígitos";
+        } else {
+            resultado += " 3 dígitos";
+        }
+        resultado += "<br></p>"; 
+    } while (valor != 0);
+    div14.innerHTML = resultado;
+}
+function ejercicio13(){
+    var f;
+    var resultado='';
+    var div15 = document.getElementById('Ejemplo13');
+    div15.innerHTML='<p>';
+    for(f=1;f<=10;f++){
+        resultado=resultado+f+' ';
+    }
+    div15.innerHTML+=resultado+'</p>';
+}
