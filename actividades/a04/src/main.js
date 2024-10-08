@@ -82,3 +82,37 @@ function ejercicio7(){
         }
     }
 }
+function ejercicio8(){
+    var valor;
+    valor=prompt('Ingresar un valor comprendido entre 1 y 5: ', '');
+    valor=parseInt(valor);
+    var div10 = document.getElementById('Ejemplo8');
+    switch(valor){
+        case 1:div10.innerHTML='<p>Uno</p>';
+        break;
+        case 2:div10.innerHTML='<p>Dos</p>';
+        break;
+        case 3:div10.innerHTML='<p>Tres</p>';
+        break;
+        case 4:div10.innerHTML='<p>Cuatro</p>';
+        break;
+        case 5:div10.innerHTML='<p>Cinco</p>';
+        break;
+        default:div10.innerHTML='<p>Debe ingresar un valor comprendido entre 1 y 5.</p>';
+    }
+}
+function ejercicio9(){
+    var col;
+    col=prompt('Ingresa el color con que quiera pintar el fondo del div (rojo, verde, azul)','');
+    var div11 = document.getElementById('Ejemplo9');
+    div11.style.width='100px';
+    div11.style.height='100px';
+    switch(col){
+        case 'rojo':div11.style.backgroundColor='#ff0000';
+        break;
+        case 'verde':div11.style.backgroundColor='#00ff00';
+        break;
+        case 'azul':div11.style.backgroundColor='#0000ff';
+        break;
+    }
+}
