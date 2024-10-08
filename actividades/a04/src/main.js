@@ -169,3 +169,18 @@ function ejercicio13(){
     }
     div15.innerHTML+=resultado+'</p>';
 }
+function ejercicio14(){
+    var div16 =document.getElementById('Ejemplo14');
+    div16.innerHTML='<p>Cuidado<br>Ingresa tu documento correctamente</p>';
+    div16.innerHTML+='<p>Cuidado<br>Ingresa tu documento correctamente</p>';
+    div16.innerHTML+='<p>Cuidado<br>Ingresa tu documento correctamente</p>';
+}
+function ejercicio15(){
+    function mostrarMensaje(){
+        var div17 =document.getElementById('Ejemplo15');
+        div17.innerHTML+='<p>Cuidado<br>Ingresa tu documento correctamente</p>';
+    }
+    mostrarMensaje();
+    mostrarMensaje();
+    mostrarMensaje();
+}
