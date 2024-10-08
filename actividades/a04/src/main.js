@@ -43,8 +43,42 @@ function ejercicio5(){
     var nota;
     nombre=prompt('Ingresa tu nombre: ','');
     nota=prompt('Ingresa tu nota: ', '');
+    var div7 = document.getElementById('Ejemplo5');
     if(nota>=4){
-        var div7 = document.getElementById('Ejemplo5');
         div7.innerHTML='<p>'+nombre+' esta aprobado con un '+nota+'</p>'
+    }
+}
+function ejercicio6(){
+    var num1,num2;
+    num1=prompt('Ingresa el primer numero: ', '');
+    num2=prompt('Ingresa el segundo numero: ','');
+    num1=parseInt(num1);
+    num2=parseInt(num2);
+    var div8 = document.getElementById('Ejemplo6');
+    if(num1>num2){
+        div8.innerHTML='<p>El mayor es '+num1+'</p>';
+    }else{
+        div8.innerHTML='<p>El mayor es '+num2+'</p>';
+    }
+}
+function ejercicio7(){
+    var nota1, nota2, nota3;
+    nota1=prompt('Ingresa 1ra. nota: ','');
+    nota2=prompt('Ingresa 2da. nota: ','');
+    nota3=prompt('Ingresa 3ra. nota: ','');
+    nota1=parseInt(nota1);
+    nota2=parseInt(nota2);
+    nota3=parseInt(nota3);
+    var pro;
+    pro=(nota1+nota2+nota3)/3;
+    var div9 = document.getElementById('Ejemplo7');
+    if(pro>=7){
+        div9.innerHTML='<p>Aprobado</p>';
+    }else{
+        if(pro>=4){
+            div9.innerHTML='<p>Regular</p>';
+        }else{
+            div9.innerHTML='<p>Reprobado</p>';
+        }
     }
 }
