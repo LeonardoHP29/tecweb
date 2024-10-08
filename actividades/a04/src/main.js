@@ -116,3 +116,27 @@ function ejercicio9(){
         break;
     }
 }
+function ejercicio10(){
+    var x;
+    x=1;
+    var resultado='';
+    var div12 = document.getElementById('Ejemplo10');
+    while(x<=100){
+       resultado='<p>'+resultado+x+'<br></p>';
+       x=x+1;
+    }
+    div12.innerHTML=resultado;
+}
+function ejercicio11(){
+    var x=1;
+    var suma=0;
+    var valor;
+    while(x<=5){
+        valor=prompt('Ingresar el valor: ','');
+        valor=parseInt(valor);
+        suma=suma+valor;
+        x=x+1;
+    }
+    var div13 = document.getElementById('Ejemplo11');
+    div13.innerHTML='<p>La suma de los valores es '+suma+'<br></p>'
+}
