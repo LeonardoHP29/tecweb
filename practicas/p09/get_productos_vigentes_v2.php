@@ -49,7 +49,6 @@
                             if ($row['eliminado'] == 1) {
                                 continue;
                             } else {
-                                // Cada fila de la tabla
                                 echo '<tr id="row_' . $row['id'] . '">';
                                 echo '<th scope="row">' . $row['id'] . '</th>';
                                 echo '<td class="row-data">' . $row['nombre'] . '</td>';
@@ -59,7 +58,7 @@
                                 echo '<td class="row-data">' . $row['unidades'] . '</td>';
                                 echo '<td class="row-data">' . utf8_encode($row['detalles']) . '</td>';
                                 echo '<td class="row-data"><img src="' . $row['imagen'] . '" width="100" height="auto" alt="Imagen del producto"></td>';
-                                echo '<td><input type="button" value="Modificar" onclick="cambiar(event);" /></td>';
+                                echo '<td><input type="button" value="Modificar" onclick="cambiar(event, ' . $row['id'] . ');" /></td>';
                                 echo '</tr>';
                             }
                         }
@@ -79,7 +78,7 @@
     </div>
 
     <script>
-        function cambiar(event) {
+        function cambiar(event, id) {
             console.log("Botón de modificar presionado");
 
             // Obtiene el ID de la fila donde está el botón presionado
@@ -98,12 +97,19 @@
             var imagen = data[6].querySelector('img').src; // Obtener la imagen correctamente
 
             alert("Nombre: " + nombre + "\nMarca: " + marca+"\nModelo: " + modelo + "\nPrecio: " + precio+"Detalles: " + detalles + "\nUnidades: " + unidades+"\nImagen: " + imagen );
-            send2form(nombre, marca, modelo, precio, detalles, unidades, imagen);
+            send2form(id, nombre, marca, modelo, precio, detalles, unidades, imagen);
 
         }
 
-        function send2form(nombre, marca, modelo, precio, detalles, unidades, imagen) {
+        function send2form(id, nombre, marca, modelo, precio, detalles, unidades, imagen ) {
             var form = document.createElement("form");
+
+            // Campo oculto para el ID
+            var idIn = document.createElement("input");
+            idIn.type = 'hidden';
+            idIn.name = 'id';
+            idIn.value = id;
+            form.appendChild(idIn);
 
             // Campo para el nombre
             var nombreIn = document.createElement("input");
