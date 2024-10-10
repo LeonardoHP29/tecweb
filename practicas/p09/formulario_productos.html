@@ -1,0 +1,113 @@
+<!DOCTYPE html >
+<html>
+
+  <head>
+    <meta charset="utf-8" >
+    <title>Registro de Producto</title>
+    <style type="text/css">
+      ol, ul { 
+      list-style-type: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Formulario de MarketZone</h1>
+
+    <form id="formularioProducto" action="" method="post">
+
+      <fieldset>
+        <legend>Información del Producto</legend>
+
+        <ul>
+          <li><label for="form-name">Nombre:</label> <input type="text" name="name" id="form-name"></li>
+          <li>
+            <label for="form-marca">Marca:</label>
+            <select name="modelo" id="form-marca">
+                <option value="modelo1">Lenovo</option>
+                <option value="modelo2">HP</option>
+                <option value="modelo3">Motorola</option>
+                <option value="modelo4">Samsumg</option>
+                <option value="modelo5">Iphone</option>
+            </select>
+        </li>
+          <li><label for="form-modelo">Modelo:</label> <input type="text" name="modelo" id="form-modelo"></li>
+          <li><label for="form-precio">Precio:</label> <input type="text" name="precio" id="form-precio"></li>
+          <li><label for="form-detalles">Detalles:</label><br><textarea name="detalles" rows="4" cols="60" id="form-detalles" placeholder="No más de 250 caracteres de longitud"></textarea></li>
+          <li><label for="form-unidades">Unidades:</label> <input type="text" name="unidades" id="form-unidades"></li>
+          <li><label for="form-imagen">Ruta de imagen:</label> <input type="text" name="imagen" id="form-imagen"></li>
+        </ul>
+      </fieldset>
+
+      <p>
+        <input type="submit" value="Regristar Producto" onclick="validar();">
+        <input type="reset">
+      </p>
+
+    </form>
+    <script>
+    function validar(event) {
+      var nombre = document.getElementById('form-name').value;
+      var marcaSelect = document.getElementById('form-marca');
+      var marca = marcaSelect.options[marcaSelect.selectedIndex].value;
+      var modelo = document.getElementById('form-modelo').value;
+      var precio = parseFloat(document.getElementById('form-precio').value);
+      var detalles = document.getElementById('form-detalles').value;
+      var unidades = parseInt(document.getElementById('form-unidades').value);
+      var imagen = document.getElementById('form-imagen').value;
+
+      // Validaciones
+      if (nombre === '') {
+        alert('¡Debes llenar el campo Nombre!');
+        event.preventDefault();
+        return;
+      } else if (marca === '') {
+        alert('Debe seleccionar una marca.');
+        event.preventDefault();
+        return;
+      } else if (modelo === '') {
+        alert('¡Debes llenar el campo Modelo!');
+        event.preventDefault();
+        return;
+      } else if (isNaN(precio)) {
+        alert('¡Debes llenar el campo Precio correctamente!');
+        event.preventDefault();
+        return;
+      }
+
+      // Validaciones adicionales
+      if (nombre.length > 100) {
+        alert('¡El campo nombre tiene más de 100 caracteres!');
+        event.preventDefault();
+        return;
+      }
+      if (modelo.length > 25) {
+        alert('¡El campo modelo tiene más de 25 caracteres!');
+        event.preventDefault();
+        return;
+      }
+      if (precio <= 99.99) {
+        alert('¡El precio debe ser mayor a 99.99!');
+        event.preventDefault();
+        return;
+      }
+      if (detalles.length > 250) {
+        alert('¡El campo detalles tiene más de 250 caracteres!');
+        event.preventDefault();
+        return;
+      }
+      if (isNaN(unidades) || unidades < 0) {
+        alert('¡El campo unidades debe ser un número mayor o igual a 0!');
+        event.preventDefault();
+        return;
+      }
+      if (imagen === '') {
+        imagen = 'img/imagen_predefinida.png';
+      }
+    }
+  </script>
+</body>
+
+</html>
+  </body>
+</html>
