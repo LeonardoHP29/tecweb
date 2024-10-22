@@ -22,6 +22,7 @@ function init() {
 
 //Iniciación con JQuery
 $(document).ready(function(){
+    let edit = false;
     console.log('Jquery is working');
     $('#product-result').hide();
     mostrarlista();
@@ -41,7 +42,7 @@ $(document).ready(function(){
                     let template = '';
                     productos.forEach(producto => {
                         template += `
-                            ${producto.nombre}<br>
+                        <li> ${producto.nombre}</li>
                         `;
                         console.log(producto.nombre);
                     });
@@ -105,9 +106,14 @@ $(document).ready(function(){
         //Enviar datos
         const postData ={
             name: $('#name').val(),
-            description: $('#description').val()
+            description: $('#description').val(),
+            producto_id: $('#producto_id').val()
         };
-        $.post('backend/product-add.php',postData, function(response){
+
+        let Url = edit === false ? 'backend/product-add.php' : 'backend/product-edit.php';
+        console.log(Url);
+
+        $.post(Url,postData, function(response){
             $('#container').html(response);
             $('#product-result').removeClass('d-none');
             mostrarlista();
@@ -129,7 +135,9 @@ $(document).ready(function(){
                     template += `
                         <tr productoID="${producto.id}">
                             <td>${producto.id}</td>
-                            <td>${producto.nombre}</td>
+                            <td>
+                                <a href="#" class="product-item">${producto.nombre}</a>
+                            </td>
                             <td>
                                 <ul>
                                     <li>precio: ${producto.precio}</li>
@@ -164,5 +172,21 @@ $(document).ready(function(){
                 mostrarlista(); 
             })
         }
-    })
+    });
+
+    //Iteraccion con el usuario
+    $(document).on('click', '.product-item', function() {
+        let element = $(this)[0].parentElement.parentElement;
+        let id = $(element).attr('productoID');
+        $.post('backend/product-single.php', { id }, function(response) {
+            const producto = JSON.parse(response);
+            $('#producto_id').val(producto.id);
+            $('#name').val(producto.nombre);
+            delete producto.id;
+            delete producto.nombre;
+            $('#description').val(JSON.stringify(producto, null, 2));
+            edit = true;
+        });
+    });
+
 });
