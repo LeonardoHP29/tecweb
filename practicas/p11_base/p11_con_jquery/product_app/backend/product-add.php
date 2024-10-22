@@ -1,6 +1,5 @@
 <?php
-    include_once __DIR__.'/database.php';
-
+    include('database.php');
     $data = array(
         'status' => 'error',
         'message' => 'Ocurrió un error inesperado.'
@@ -9,10 +8,8 @@
     if(isset($_POST['name']) && isset($_POST['description'])) {
         $nombre = $_POST['name'];
         $description = $_POST['description'];
-        
         $jsonOBJ = json_decode($description);
         $conexion->set_charset("utf8");
-
         $sql = "SELECT * FROM productos WHERE nombre = '{$nombre}' AND eliminado = 0";
         $result = $conexion->query($sql);
         
@@ -24,16 +21,13 @@
                 $data['status'] = "success";
                 $data['message'] = "Producto agregado correctamente";
             } else {
-                $data['message'] = "ERROR: No se ejecutó $sql. " . mysqli_error($conexion);
+                $data['message'] = "No se ejecutó $sql. " . mysqli_error($conexion);
             }
         } else {
-            $data['message'] = "ERROR: Ya existe un producto con el mismo nombre.";
+            $data['message'] = "Ya existe un producto con el mismo nombre.";
         }
         $result->free();
-    } else {
-        $data['message'] = 'Datos incompletos.';
     }
     $conexion->close();
-
-    echo json_encode($data, JSON_PRETTY_PRINT);
+    echo 'status: '.$data['status'].'<br> message: '.$data['message'];
 ?>
