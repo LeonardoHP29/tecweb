@@ -3,7 +3,7 @@
 
     $data = array(
         'status' => 'error',
-        'message' => 'Ocurrió un error inesperado.'
+        'message' => 'No se pudo actualizar el producto'
     );
     $id = $_POST['producto_id'];
     $nombre = $_POST['name'];
@@ -11,15 +11,14 @@
     $jsonOBJ = json_decode($descripcion); 
     $conexion->set_charset("utf8");
     
-    if (!empty($id)) {
+    if (!empty($nombre)) {
         $query = "UPDATE productos SET nombre = '{$nombre}', marca = '{$jsonOBJ->marca}', modelo = '{$jsonOBJ->modelo}', precio = {$jsonOBJ->precio}, 
         detalles = '{$jsonOBJ->detalles}', unidades = {$jsonOBJ->unidades}, imagen = '{$jsonOBJ->imagen}' WHERE id = {$id}"; 
         if ($conexion->query($query) === TRUE) {
             $data['status'] = "success";
             $data['message'] = "Producto actualizada correctamente";
-        } else {
-            $data['message'] = "No se pudo actualizar el producto";
         }
+         
     } 
     echo 'status: '.$data['status'].'<br> message: '.$data['message'];
 ?>

@@ -60,24 +60,6 @@ $(document).ready(function(){
         var descripcion = $('#description').val();
         var objectJSON = JSON.parse(descripcion);
 
-        if (nombre === '') {
-            alert('¡Debes llenar el campo Nombre!');
-            e.preventDefault();
-            return;
-        } else if (objectJSON.marca === '') {
-            alert('¡Debes llenar el campo Marca!');
-            e.preventDefault();
-            return;
-        } else if (objectJSON.modelo === '') {
-            alert('¡Debes llenar el campo Modelo!');
-            e.preventDefault();
-            return;
-        } else if (isNaN(objectJSON.precio)) {
-            alert('¡Debes llenar el campo Precio correctamente!');
-            e.preventDefault();
-            return;
-        }
-
         if (nombre.length > 100) {
             alert('¡El campo nombre tiene más de 100 caracteres!');
             e.preventDefault();
