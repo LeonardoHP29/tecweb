@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="1234" visitas="12" puntos="5000">
+        <nombre>Leonardo Hernandez</nombre>
+        <correo>leohdz2905@gmail.com</correo>
+        <telefono tipo="movil">2761100735</telefono>
+    </tarjeta>
+</cinefanatico>
