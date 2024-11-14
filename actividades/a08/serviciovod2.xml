@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogovod>
+    <cuenta correo="leohdz2905@gmail.com">
+        <perfiles>
+            <perfil usuario="Leonardo Hernandez" idioma="Español"/>
+            <perfil usuario="Familia" idioma="Español"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Acción">
+                <titulo nombre="Demon Slayer: To The Swordsmith Village" duración="120 minutos"/>
+                <titulo nombre="Escuadrón 6" duración="128 minutos"/>
+                <titulo nombre="Misión de rescate" duración="116 minutos"/>
+                <titulo nombre="Red Notice" duración="118 minutos"/>
+            </genero>
+            <genero nombre="Terror">
+                <titulo nombre="Voces" duración="128 minutos"/>
+                <titulo nombre="El legado del Diablo" duración="127 minutos"/>
+                <titulo nombre="Juego del miedo" duración="103 minutos"/>
+                <titulo nombre="Scream: grita antes de morir" duración="111 minutos"/>
+            </genero> 
+        </peliculas>
+        <programas>
+            <genero nombre="Comedia">
+                <titulo nombre="¡Carly" duración="6 temporadas"/>
+                <titulo nombre="Trabajo incógnito" duración="2 temporadas"/>
+                <titulo nombre="El show de los Looney Tunes" duración="2 temporadas"/>
+                <titulo nombre="Fuerza Espacial" duración="2 temporadas"/>
+            </genero>
+            <genero nombre="Misterio">
+                <titulo nombre="Stranger Things" duración="4 temporadas"/>
+                <titulo nombre="Dark" duración="3 temporadas"/>
+                <titulo nombre="El mundo oculto de Sabrina" duración="4 temporadas"/>
+                <titulo nombre="La orden secreta" duración="2 temporadas"/>
+            </genero> 
+        </programas>
+    </contenido>
+</catalogovod>

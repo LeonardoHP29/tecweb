@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogovod>
+    <cuenta>
+        <correo>leohdz2905@gmail.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>Leonardo Hernandez </usuario>
+                <idioma>Español</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Familia</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>Acción</nombre>
+                <titulo>
+                    <nombre>Demon Slayer: To The Swordsmith Village</nombre>
+                    <duración>120 minutos</duración>
+                </titulo>
+                <titulo>
+                    <nombre>Escuadrón 6</nombre>
+                    <duración>128 minutos</duración>
+                </titulo>
+                <titulo>
+                    <nombre>Misión de rescate</nombre>
+                    <duración>116 minutos</duración>
+                </titulo>
+                <titulo>
+                    <nombre>Red Notice</nombre>
+                    <duración>118 minutos</duración>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Terror</nombre>
+                <titulo>
+                    <nombre>Voces</nombre>
+                    <duración>128 minutos</duración>
+                </titulo>
+                <titulo>
+                    <nombre>El legado del Diablo</nombre>
+                    <duración>127 minutos</duración>
+                </titulo>
+                <titulo>
+                    <nombre>Juego del miedo</nombre>
+                    <duración>103 minutos</duración>
+                </titulo>
+                <titulo>
+                    <nombre>Scream: grita antes de morir</nombre>
+                    <duración>111 minutos</duración>
+                </titulo>
+            </genero> 
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>Comedia</nombre>
+                <titulo>
+                    <nombre>¡Carly</nombre>
+                    <duración>6 temporadas</duración>
+                </titulo>
+                <titulo>
+                    <nombre>Trabajo incógnito</nombre>
+                    <duración>2 temporadas</duración>
+                </titulo>
+                <titulo>
+                    <nombre>El show de los Looney Tunes</nombre>
+                    <duración>2 temporadas</duración>
+                </titulo>
+                <titulo>
+                    <nombre>Fuerza Espacial</nombre>
+                    <duración>2 temporadas</duración>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Misterio</nombre>
+                <titulo>
+                    <nombre>Stranger Things</nombre>
+                    <duración>4 temporadas</duración>
+                </titulo>
+                <titulo>
+                    <nombre>Dark</nombre>
+                    <duración>3 temporadas</duración>
+                </titulo>
+                <titulo>
+                    <nombre>El mundo oculto de Sabrina</nombre>
+                    <duración>4 temporadas</duración>
+                </titulo>
+                <titulo>
+                    <nombre>La orden secreta</nombre>
+                    <duración>2 temporadas</duración>
+                </titulo>
+            </genero> 
+        </programas>
+    </contenido>
+</catalogovod>
