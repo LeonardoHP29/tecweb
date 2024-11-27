@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod_ep.dtd">
+<?xml-stylesheet href="catalogovod.xsl" type="text/xsl"?>
+<CatalogoVOD>
+    <cuenta correo="leohdz2905@gmail.com">
+        <perfiles>
+            <perfil usuario="Leonardo Hernandez Palestina" idioma="Español"/>
+            <perfil usuario="Familiar" idioma="Español"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="USA">
+            <genero nombre="Acción">
+                <titulo duracion="120 minutos">Demon Slayer: To The Swordsmith Village</titulo>
+                <titulo duracion="128 minutos">Escuadrón 6</titulo>
+                <titulo duracion="116 minutos">Misión de rescate</titulo>
+                <titulo duracion="118 minutos">Red Notice</titulo>
+            </genero>
+            <genero nombre="Terror">
+                <titulo duracion="128 minutos">Voces</titulo>
+                <titulo duracion="127 minutos">El legado del Diablo</titulo>
+                <titulo duracion="103 minutos">Juego del miedo</titulo>
+                <titulo duracion="111 minutos">Scream: grita antes de morir</titulo>
+            </genero>
+            <genero nombre="Drama">
+                <titulo duracion="135 minutos">Roma</titulo>
+                <titulo duracion="126 minutos">El poder del perro</titulo>
+                <titulo duracion="113 minutos">El niño que domo el viento</titulo>
+                <titulo duracion="99 minutos">Diecisiete</titulo>
+            </genero>
+            <genero nombre="Documental">
+                <titulo duracion="94 minutos">Jim y Andy</titulo>
+                <titulo duracion="118 minutos">Sergio</titulo>
+                <titulo duracion="92 minutos">Ronaldo</titulo>
+                <titulo duracion="106 minutos">Senna</titulo>
+            </genero>
+        </peliculas>
+        <series region="ESP">
+            <genero nombre="Comedia">
+                <titulo duracion="6 temporadas">¡Carly</titulo>
+                <titulo duracion="2 temporadas">Trabajo incógnito</titulo>
+                <titulo duracion="2 temporadas">El show de los Looney Tunes</titulo>
+                <titulo duracion="2 temporadas">Fuerza Espacial</titulo>
+            </genero>
+            <genero nombre="Misterio">
+                <titulo duracion="4 temporadas">Stranger Things</titulo>
+                <titulo duracion="3 temporadas">Dark</titulo>
+                <titulo duracion="4 temporadas">El mundo oculto de Sabrina</titulo>
+                <titulo duracion="2 temporadas">La orden secreta</titulo>
+            </genero>
+            <genero nombre="Animación">
+                <titulo duracion="2 temporadas">Scooby-Doo! Misterios S.A.</titulo>
+                <titulo duracion="7 temporadas">Ranma 1/2</titulo>
+                <titulo duracion="10 temporadas">Los padrinos Magicos</titulo>
+                <titulo duracion="6 temporadas">Principe de los dagrones</titulo>
+            </genero>
+            <genero nombre="Acción">
+                <titulo duracion="2 temporadas">Arcane</titulo>
+                <titulo duracion="2 temporadas">El juego de Calamar</titulo>
+                <titulo duracion="10 temporadas">The Walking Dead</titulo>
+                <titulo duracion="1 temporada">Cyberpunk:Edgerunners</titulo>
+            </genero>
+        </series>
+        
+    </contenido>
+</CatalogoVOD>

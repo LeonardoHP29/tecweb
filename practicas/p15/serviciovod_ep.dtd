@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % perfil_atts "usuario CDATA #REQUIRED idioma CDATA #REQUIRED">
+<!ENTITY % region_atts "region (MEX | USA | ESP | ARG | KOR) 'USA'">
+<!ELEMENT CatalogoVOD (cuenta, contenido)?>
+<!ELEMENT cuenta (perfiles?)>
+<!ATTLIST cuenta 
+    correo CDATA #REQUIRED
+>
+<!ELEMENT perfiles (perfil+)>
+<!ELEMENT perfil EMPTY>
+<!ATTLIST perfil
+    %perfil_atts;
+>
+<!ELEMENT contenido (peliculas, series)?>
+<!ELEMENT peliculas (genero)+>
+<!ATTLIST peliculas 
+    %region_atts;
+>
+<!ELEMENT series (genero)+>
+<!ATTLIST series 
+    %region_atts;
+>
+<!ELEMENT genero (titulo)+>
+<!ATTLIST genero
+    nombre CDATA #REQUIRED
+>
+<!ELEMENT titulo (#PCDATA)>
+<!ATTLIST titulo
+    duracion CDATA #REQUIRED
+>
