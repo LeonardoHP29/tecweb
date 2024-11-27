@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tw:Spotify xmlns:tw="http://tecnologiasweb.com.mx"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://tecnologiasweb.com.mx spotify_ns.xsd" version="1.0"
+    >
+    <tw:Cuenta id="1" plan="premium" fechaIni="2022-02-01" fechaFin="2024-12-12">
+        <tw:Nombre>Leonardo Hernandez</tw:Nombre>
+        <tw:Correo>leohdz2905@gmail.com</tw:Correo>
+        <tw:Telefono Tipo="movil">2761100735</tw:Telefono>
+    </tw:Cuenta>
+    <tw:Cuenta id="2" plan="basico">
+        <tw:Nombre>Ignacio Flores</tw:Nombre>
+        <tw:Correo>IgnacioFlor@gmail.com</tw:Correo>
+    </tw:Cuenta>
+    <tw:Cuenta id="3" plan="premium" fechaIni="2024-07-12">
+        <tw:Nombre>Michel Leon</tw:Nombre>
+        <tw:Correo>MichelLeon@gmail.com</tw:Correo>
+        <tw:Telefono Tipo="casa">77770202</tw:Telefono>
+    </tw:Cuenta>
+    <tw:Cuenta id="4" plan="basico" fechaFin="2024-12-12">
+        <tw:Nombre>Damian Cocone</tw:Nombre>
+        <tw:Correo>DamianCoc@gmail.com</tw:Correo>
+    </tw:Cuenta>
+</tw:Spotify>

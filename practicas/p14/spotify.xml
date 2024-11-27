@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Ejercicio 1
+<Spotify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="spotify.xsd" version="1.0">
+-->
+<Spotify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="spotify_v2.xsd" version="1.0">
+    <Cuenta id="1" plan="premium" fechaIni="2022-02-01" fechaFin="2024-12-12">
+        <Nombre>Leonardo Hernandez</Nombre>
+        <Correo>leohdz2905@gmail.com</Correo>
+        <Telefono Tipo="movil">2761100735</Telefono>
+    </Cuenta>
+    <Cuenta id="2" plan="basico">
+        <Nombre>Ignacio Flores</Nombre>
+        <Correo>IgnacioFlor@gmail.com</Correo>
+    </Cuenta>
+    <Cuenta id="3" plan="premium" fechaIni="2024-07-12">
+        <Nombre>Michel Leon</Nombre>
+        <Correo>MichelLeon@gmail.com</Correo>
+        <Telefono Tipo="casa">77770202</Telefono>
+    </Cuenta>
+    <Cuenta id="4" plan="basico" fechaFin="2024-12-12">
+        <Nombre>Damian Cocone</Nombre>
+        <Correo>DamianCoc@gmail.com</Correo>
+    </Cuenta>
+</Spotify>
