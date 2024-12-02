@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo</title>
+    <link href="../css/moni.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/blog/">
+</head>
+<body>
+
+  <div class="container">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap justify-content-center align-items-between">
+          <div class="col-4 pt-1" id="logoContainer">
+              <a href="#">
+                  <img src="../css/img/t.webp" alt="Rehabitad" class="small-image" style="width: 50px; height: auto;">
+              </a>
+              <a class="blog-header-logo text-dark" href="#">Rehabitad</a>
+          </div>
+      </div>
+  </header>
+  </div>
+
+    <h2 class="blog-header">Monitoreo de áreas</h2>
+    <div id="form-registro-area">
+      <table class="tabla-monitoreo">
+        <thead>
+          <tr>
+            <th>Identificador</th>
+            <th>Ubicación</th>
+            <th>Descripción</th>
+            <th>Nivel de prioridad</th>
+            <th>Imagen</th>
+            <th>Modificar</th>
+          </tr>
+        </thead>
+        <tbody id="areas"></tbody>
+      </table>
+    </div>
+    <div class="button-container">
+      <a href="menu.php" class="btn2 btn-back">Regresar</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <script src="js/app.js"></script>
+</body>
+</html>

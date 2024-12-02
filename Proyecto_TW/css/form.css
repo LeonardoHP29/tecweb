@@ -1,0 +1,199 @@
+/* Estilos generales para el formulario */
+/* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+  }
+  
+  .blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+    font-size: 2.25rem;
+    color: black;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+  
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#form-registro-area {
+    background: linear-gradient(135deg, #a3aea3, #dae6d7); /* Fondo degradado */
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin: 0 auto;
+}
+
+#form-registro-area h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+#form-modificar-area {
+    background: linear-gradient(135deg, #a3aea3, #dae6d7); /* Fondo degradado */
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin: 20px auto;
+}
+
+#form-modificar-area h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.formulario-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.formulario-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.formulario-input,
+.formulario-textarea,
+.formulario-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.formulario-input:focus,
+.formulario-textarea:focus,
+.formulario-select:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+    border-color: #2f80ed;
+}
+
+textarea {
+    resize: none;
+}
+
+.formulario-botones {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.formulario-boton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-submit {
+    background-color: #000000;
+    color: white;
+}
+
+.formulario-submit:hover {
+    background-color: #2f80ed;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+}
+
+.formulario-reset {
+    background-color: #f44336;
+    color: white;
+}
+
+.formulario-reset:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 4px 10px rgba(244, 67, 54, 0.5);
+}
+
+.small-image { 
+    width: 50px; 
+    height: 50px;
+     border-radius: 8px; 
+   
+  }
+  .button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .btn-back {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: 66%;
+    height: auto;
+  }
+  
+  .btn-back:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .btn-back:active {
+    background-color: #004085;
+  }
+  #logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0; 
+    margin-bottom: 10px;
+}
+
+.blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+    color: black;
+    margin-top: 10px;
+}
+  
+

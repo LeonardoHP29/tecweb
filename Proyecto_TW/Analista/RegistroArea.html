@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de areas</title>
+    <link href="../css/form.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/blog/">
+    <style>
+      #IdStatus, #detallesStatus, #imagenStatus, #PrioridadStatus, #UbicacionStatus{
+        width: 100%;
+        height: 5px;
+        margin-top: 5px;
+        border-radius: 2px;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .d-none {
+        display: none;
+      }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container">
+            <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-center align-items-between">
+                    <div class="col-4 pt-1" id="logoContainer">
+                        <a href="#">
+                            <img src="../css/img/t.webp" alt="Rehabitad" class="small-image" style="width: 90px; height: auto;">
+                        </a>
+                        <a class="blog-header-logo text-dark" href="#">Rehabitad</a>
+                    </div>
+                </div>
+            </header>
+    </div>
+
+    <form method="post" id="form-registro-area" class="formulario">
+
+        <ul class="formulario-lista">
+            <li class="formulario-item">
+                <label for="identificador" class="formulario-label">Identificador:</label>
+                <input type="text" name="identificador" id="identificador" class="formulario-input">
+                <div id="IdStatus" class="d-none"></div>
+            </li>
+            <li class="formulario-item">
+                <label for="ubicacionText" class="formulario-label">Ubicación:</label>
+                <input type="text" name="ubicacionText" id="ubicacionText" class="formulario-input">
+                <div id="UbicacionStatus" class="d-none"></div>
+            </li>
+            <li class="formulario-item">
+                <label for="descripcion" class="formulario-label">Descripción:</label><br>
+                <textarea rows="5" cols="60" name="descripcion" id="descripcion" class="formulario-textarea"></textarea>
+                <div id="detallesStatus" class="d-none"></div>
+            </li>
+            <li class="formulario-item">
+                <label for="Nprioridad" class="formulario-label">Nivel de prioridad:</label>
+                <select name="Nprioridad" id="Nprioridad" class="formulario-select" size="1">
+                    <option value="bajo">Bajo</option>
+                    <option value="moderado">Moderado</option>
+                    <option value="alto">Alto</option>
+                    <option value="critico">Crítico</option>
+                </select>
+                <div id="PrioridadStatus" class="d-none"></div>
+            </li>
+            <li class="formulario-item">
+                <label for="Imagen" class="formulario-label">Imagen:</label>
+                <input type="text" name="Imagen" id="Imagen" class="formulario-input">
+                <div id="imagenStatus" class="d-none"></div>
+            </li>
+            <li class="formulario-item">
+                <input type="hidden" id="area-id" value="">
+            </li>
+        </ul>
+    
+        <div class="formulario-botones">
+            <input type="reset" value="Cancelar" class="formulario-boton formulario-reset">
+            <input type="submit" value="Registrar Área" class="formulario-boton formulario-submit">
+        </div>
+    
+    </form>
+
+    <div class="button-container">
+        <a href="menu.php" class="btn2 btn-back">Regresar</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
