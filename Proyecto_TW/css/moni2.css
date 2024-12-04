@@ -1,0 +1,314 @@
+
+/* Estilos para la tabla de monitoreo */
+.tabla-monitoreo {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  
+  .tabla-monitoreo th,
+  .tabla-monitoreo td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .tabla-monitoreo th {
+    background-color: #2f80ed;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .tabla-monitoreo tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tabla-monitoreo tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .limitar-texto {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .texto2 {
+    max-width: 200px;
+    text-align: start;
+  }
+  
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+  
+  /* Estilos para las imágenes pequeñas */
+  .small-image {
+    width: 50px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Contenedor de los botones */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  
+  .btn-back {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: 75%;
+    height: auto;
+  }
+  
+  .btn-back:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .btn-back:active {
+    background-color: #004085;
+  }
+  
+
+  
+  /* Estilos para el área de información */
+  #area-info {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #area-info h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #ubicacion-info, #imagen-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    margin: 10px;
+    text-align: left;
+  }
+  
+  .info-section {
+    margin-bottom: 20px;
+  }
+  
+  h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  #ubicacion-info, #imagen-info {
+    padding: 10px;
+  }
+  
+  #descripcion-info, #prioridad-info {
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+  #descripcion-info h4, #prioridad-info h4 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  #descripcion-info p {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  #prioridad-info .bajo {
+    color: green;
+  }
+  
+  #prioridad-info .moderado {
+    color: yellow;
+  }
+  
+  #prioridad-info .alto {
+    color: orange;
+  }
+  
+  #prioridad-info .critico {
+    color: red;
+  }
+  
+  #prioridad-info p {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  #prioridad-info {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+  blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    align-items: center;
+}
+h2.blog-header {
+  text-align: center;
+  margin: 20px 0; /* Espaciado opcional */
+}
+
+.blog-header-logo {
+    font-size: 1.45rem;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+#logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logoContainer img {
+    margin-right: 10px;
+}
+
+.col-md-3, .col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para los resultados de búsqueda */
+.col-md-6.text-center {
+  position: relative;
+}
+
+/* Estilos para la lista de resultados */
+#search-results {
+  width: 250px;
+  margin-top: 5px;
+  padding-left: 0;
+  list-style-type: none;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(159, 145, 145, 0.1);
+  border-radius: 5px;
+ 
+}
+
+/* Estilos para los elementos de la lista */
+#search-results li {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover en los elementos de la lista */
+#search-results li:hover {
+  background-color: #e9ecef;
+}
+
+#form-registro-area {
+  margin-top: 20px; 
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+#damageChart {
+  width: 250px !important; 
+  height: 250px !important; 
+  max-width: 250%;
+}
