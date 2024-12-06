@@ -27,14 +27,14 @@
         
         <div class="profile">
             <a href="Monitoreo.html">
-                <img src="../img/Monitoreo.png" alt="Perfil 1">
+                <img src="../img/Monitoreo.jpg" alt="Perfil 1">
                 <div class="profile-name">Monitoreo</div>
             </a>
         </div>
         
         <div class="profile">
             <a href="RegistroArea.html">
-                <img src="../img/Area.png" alt="Perfil 2">
+                <img src="../img/agregar.jpg" alt="Perfil 2">
                 <div class="profile-name">Registrar Área</div>
             </a>
         </div>
